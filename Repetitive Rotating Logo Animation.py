@@ -8,6 +8,10 @@ from kivy.properties import NumericProperty
 Builder.load_string('''                               
 <Loading>:
     canvas.before:
+        BorderImage:
+            source: 'background.png'
+            pos: self.pos
+            size: self.size
         PushMatrix
         Rotate:
             angle: root.angle
@@ -18,7 +22,7 @@ Builder.load_string('''
     Image:
         source: 'convergence_logo.png'
         size_hint: None, None
-        size: 300, 300
+        size: 600, 600
         pos_hint: {'center_x': 0.5, 'center_y': 0.5}
 ''')
 
@@ -29,7 +33,6 @@ class Loading(FloatLayout):
         anim = Animation(angle = 360, duration=2)
         anim += Animation(angle = 360, duration=2)
         anim.repeat = True
-        #anim = Animation(size=(800, 500))
         anim.start(self)
 
     def on_angle(self, item, angle):
