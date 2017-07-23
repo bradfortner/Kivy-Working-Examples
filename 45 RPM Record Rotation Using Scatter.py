@@ -23,7 +23,7 @@ BoxLayout:
             rotation: app.angle
             scale: min(self.parent.width/self.width, self.parent.height/self.height)
             Image:
-                source: '45rpm.png'             
+                source: 'new.png'             
 """
 class RotateRecordApp(App):
     angle = NumericProperty(0)
@@ -32,7 +32,7 @@ class RotateRecordApp(App):
         return Builder.load_string(kv)
 
     def update_angle(self, dt, *args):
-        self.angle += dt * 100
+        self.angle -= dt * 175
 
 if __name__ == '__main__':
     RotateRecordApp().run()
