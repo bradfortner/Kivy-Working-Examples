@@ -88,6 +88,6 @@ class SwitchingScreenApp(App):
     def screen_switch_three(a,b):
         sm.current = 'screen_three'
     def screen_switch_welcome(a,b):
-        sm.current = 'screen_welcome'
+        sm.current = 'welcome_screen'
 
 SwitchingScreenApp().run()
