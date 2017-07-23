@@ -6,7 +6,6 @@ from kivy.animation import Animation
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.clock import Clock
-from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.properties import NumericProperty
 
